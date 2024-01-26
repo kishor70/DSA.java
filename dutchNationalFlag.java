@@ -1,5 +1,5 @@
 public class dutchNationalFlag {
-          static void swap(int arr[],int x, int y){
+    static void swap(int arr[],int x, int y){
         int temp = arr[x];
         arr[x] = arr[y];
         arr[y] = temp;
@@ -23,7 +23,7 @@ public class dutchNationalFlag {
             }
         }
         for(int i : arr){
-            System.out.print(i+" ");
+            System.out.print(i+ ",");
         }
     }
 }
