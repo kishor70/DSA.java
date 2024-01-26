@@ -1,9 +1,10 @@
-import java.util.Scanner;
 /**
  * linearSearch
  * //TC = O(n);
  *
  */
+import java.util.Scanner;
+
 public class linearSearch {
 
     public static void main(String[] args) {
