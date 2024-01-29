@@ -1,6 +1,7 @@
 //Leetcode Question 
-//Q.no: 704. Binary Search
-//Q. Link : https://leetcode.com/problems/binary-search/description/
+// Boyer Moore Algorithm
+//Q. No. 169. Majority Element
+//Q. Link : https://leetcode.com/problems/majority-element/description/
 
 //TC = n;
 //SC = O(1);
@@ -9,26 +10,27 @@ public class MajorityElement {
         public static int findMajorityElement(int[] nums) {
 
             int n= nums.length;
-            int count = 0;
-            int majority = 0;
+            int count = 1;
+            int majority = nums[0];
 
-            for(int i=0; i<n; i++){
-                if(nums[i] == nums[majority]){
+            for(int i=1; i<n; i++){
+                if(nums[i] == majority){
                 count++;
                 }else{
                     count--;
                 }
 
                 if(count == 0){
-                    majority = i;
+                    majority = nums[i];
+                    count=1;
                 }
             }
-            return nums[majority];
+            return majority;
         }
             
     
         public static void main(String[] args) {
-            int[] nums = {1, 2, 2, 2, 3, 2, 4, 2, 5};
+            int[] nums = {1, 2, 2, 4, 5, 2, 5 , 3, 5, 2, 5};
             int majorityElement = findMajorityElement(nums);
             System.out.println("Majority element: " + majorityElement); 
     }
